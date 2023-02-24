@@ -2,12 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using employeeJWTvs.Models;
 using employeeDirectory.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace employeeDirectory.Controllers
 {
-
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class EmployeeController : ControllerBase
     {
         private IRepository<EmployeedetailJwt> _employee;
@@ -15,7 +15,6 @@ namespace employeeDirectory.Controllers
         public EmployeeController()
         {
             _employee = new EmployeeService<EmployeedetailJwt>();
-
         }
 
         [HttpGet]

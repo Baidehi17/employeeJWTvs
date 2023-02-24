@@ -9,9 +9,6 @@ namespace employeeDirectory.Repository
         T ADD(T ID);
         T UPDATE(T obj);
         void Delete(int id);
-        //EmployeeDetail del(int id); 
         void Save();
-        //void Deletes(int id);
-
     }
 }
